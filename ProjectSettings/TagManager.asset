@@ -9,6 +9,8 @@ TagManager:
   - button
   - Fluid
   - bounce
+  - credits
+  - canvas
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,8 @@ public class UIManager : MonoBehaviour
 {
     //singleton pattern
     public static UIManager instance;
+
+    
     private void Awake()
     {
         if (instance == null)
@@ -42,6 +44,9 @@ public class UIManager : MonoBehaviour
     public GameObject StartArcadeModeButton;
     //public GameObject StartSurvivorModeButton;
     public GameObject MainMenuButton;
+    public GameObject MainMenuObject;
+    public GameObject CreditsObject;
+    public GameObject UIMANAGER;
 
     private void Start()
     {
@@ -114,11 +119,16 @@ public class UIManager : MonoBehaviour
     }
     */
 
+    
+
     public void StartMainMenu()
     {
         pooler.ResetPool();
         canCount = false;
-        sceneController.LoadThisScene("MainMenu");
+        // sceneController.LoadThisScene("MainMenu");
+        MainMenuObject.SetActive(false);
+        CreditsObject.SetActive(true);
+        UIMANAGER.SetActive(false);
     }
 
     //for close all buttons

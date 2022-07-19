@@ -21,6 +21,7 @@ public class Fruit : MonoBehaviour
     GameController gameController;
     Pooler pooler;
     Rigidbody rb;
+    
 
     private void Start()
     {
@@ -42,6 +43,7 @@ public class Fruit : MonoBehaviour
                 if (weapon.SwordVelocity >  1f || particleTyp == particleType.Explosion)
                 {
                     gameController.Slice(gameObject, weapon);
+                   
                 }
             }
             else
